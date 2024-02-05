@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.parent{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#021427,#062335,#1B345E);
+}
+.nav{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    border-bottom: .2px solid gray;
+}
+.logo{
+   height: 60px;
+   width: 60px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.logo img{
+    height: 55px;
+    width: 55px;
+    font-weight: 900;
+}
+.navpart2{
+    display: flex;
+    padding-right: 10vw;
+    gap: 4vw;
+    color: white;
+}
+.ri-menu-3-line{
+    display: none;
+}
+.content{
+    height: calc(100% - 80px);
+    width: 100%;
+    padding: 0 5vw;
+    display: flex;
+}
+.text{
+    height: 100%;
+    width: 50%;
+    padding: 5vw 5vw;
+    font-family: "Playfair Display";
+    color: white;
+    font-size: 10px;
+}
+.text h2{
+    font-weight: 900;
+    width: 76%;
+    line-height: 4vw;
+    font-size: 3em;
+}
+.text span{
+    color: #F4511E;
+}
+.text p{
+    font-size: 1.4em;
+    word-spacing: 2px;
+    font-weight: 700;
+    width: 80%;
+    line-height: 2vw;
+    margin-top: 2vw;
+    opacity: .8;
+}
+.text img{
+    display: none;
+}
+.text button{
+    width: 8vw;
+    height: 2.5vw;
+    color: white;
+    font-weight: 700;
+    margin-top: 2vw;
+    border: 1px groove gray;
+    border-radius: 10px;
+    background-color: #F4511E;
+}
+
+.shoeimg{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shoe2{
+    display: none;
+}
+.shoeimg img{
+    height: 100%;
+    width: 100%;
+}
+@media (max-width: 550px){
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+    }
+    .nav{
+        height: 40px;
+        width: 100%;
+        padding: 0vw 5vw;
+    }
+    .navpart2 i{
+        display: block;
+        font-size: 5.5vw;
+        font-weight: 800;
+    }
+    .ri-arrow-drop-down-line{
+        display: none;
+    }
+    .logo{
+        height: 50px;
+        width: 50px;
+    }
+    .logo img{
+        height: 45px;
+        width: 45px;
+        font-weight: 900;
+    }     
+    .navpart2 h4{
+        display: none;
+    }
+    .content{
+        padding: 2vw 5vw;
+        width: 100%;
+        height: calc(100% - 40px);
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+    .shoeimg{
+        margin-top: 8vw;
+        width: 100%;
+        height: 50%;
+    }
+    .shoeimg img{
+     height: 200px;
+     width: 200px;   
+    }
+    .text img{
+        height: 130px;
+        width: 130px;
+        display: block;
+        position: absolute;
+        left: 50vw;
+        top: 50vw;
+    }
+    .text h2{
+        font-size: 2em;
+        line-height: 6vw;
+        width: 90%;
+    }
+    .text p{
+        width: 60%;
+        top: 70vw;
+        left: 37vw;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 4vw;
+        margin-top: 25vw;
+        position: absolute;
+
+    }
+    .text button{
+        height: 5vw;
+        width: 15vw;
+        margin-top: 5vw;
+        border-radius: 5px;
+        font-size: 2vw;
+    }
+}
