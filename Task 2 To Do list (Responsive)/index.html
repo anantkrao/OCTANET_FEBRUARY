@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/icons8-checkmate-64.png" type="image/x-icon">
+    <title>Checkmate</title>
+</head>
+<body>
+    <div class="whole_page">
+        <div class="header" id="head">
+            <div class="disable-selection">
+                <div class="search_container">
+                    <input type="text" id="searchInput" placeholder="Search task by name">
+                    <i class="ri-search-eye-line" id="searchIcon" onclick="searchTask()"></i>
+                </div>
+                <div id="icons">
+                <i class="ri-add-line" id="btn">New Task</i>
+                <br>
+                <i class="ri-file-list-3-line" id="bttn">All Task</i>
+                <br>
+                <i class="ri-database-line" id="btttn">Data</i>
+                <br>
+                <i class="ri-delete-bin-6-line" onclick="clearAllTasks()" id="clear">Clear All Tasks</i>
+                <br>
+                <i class="ri-close-fill" id="close">Close All</i>
+                <br>
+            </div>
+            </div>
+        </div>
+        <div class="entry_form" id="entry_form">
+            <h2 id="title"><span>Checkmate:</span>Your Ultimate To-Do Triumph <br><p>Conquer Your Tasks in Style</p></h2>
+            <div id="features">
+                <h3>Features : </h3>
+                <ol><li>Add Tasks: Easily add new tasks to your to-do list.</li>
+                    <li>Remove Tasks: Delete tasks you no longer need with a simple click.</li>
+                    <li>Check Tasks: Mark tasks as completed using checkboxes for better organization.</li>
+                    <li>Data Recording: Keep a record of your tasks in the data section for future reference.</li>
+                </ol>
+            </div>
+            <form id="todoForm">
+                <label for="selectTask">Select Task Type :</label>
+                <select name="TaskType" id="selecttask">
+                    <option value="Programming">Programming</option>
+                    <option value="Homework">Home Work</option>
+                    <option value="ExamPreparation">Exam Preparation</option>
+                    <option value="Job">Job Related Work</option>
+                    <option value="extra">Other</option>
+                </select>
+                <br>
+                <label for="Add Task">Write Task :</label>
+                <input type="text" id="taskInput" placeholder="Enter a new task">
+                <br>
+                <label for="Selectdatetime">Start Date :</label>
+                <input type="datetime-local" id="startDate">
+                <br>
+                <label for="Selectdatetime">End Date :</label>
+                <input type="datetime-local" id="endDate">
+                <br>
+                <label for="description">Description</label>
+                <input type="text" id="textbox" placeholder="Add description">
+                <br>
+                <input type="submit" value="Add Task">
+            </form>
+            <div id="data">
+                <table id="taskTable">
+                    <thead>
+                        <tr>
+                            <th>Task Type</th>
+                            <th>Task Description</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dt">
+                       
+                    </tbody>
+                </table>
+            </div>
+            <div class="task_Review" id="task_Review">
+                <h3>Task's List</h3>
+                <hr>
+                <ol id="taskList"></ol>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

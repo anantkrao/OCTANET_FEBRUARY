@@ -1,0 +1,357 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    font-family: "Roboto";
+}
+
+.whole_page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.header {
+    height: 100%;
+    width: 20%;
+    padding: 2vh 1vw;
+    line-height: 8.5vh;
+    background-color: none;
+    font-weight: 700;
+}
+.entry_form {
+    display: none;
+    height: 100%;
+    width: 80%;
+    border-radius: 20vw;
+    background-image: url('assets/chess.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-right: 10px;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.entry_form h2 {
+    position: absolute;
+    top: 6vh;
+    font-size: 2vw;
+    color: aliceblue;
+    word-spacing: .2vw;
+}
+
+.entry_form span {
+    font-size: 5vw;
+    color: white;
+}
+
+.entry_form p {
+    font-size: 1.5vw;
+    position: absolute;
+    left: 5vw;
+}
+#features{
+    position: absolute;
+    top: 70vh;
+    left: 2vw;
+    color: white;
+    font-size: 1vw;
+    width: 230px;
+    line-height: 3vh;
+}
+.entry_form #todoForm {
+    display: none;
+    height: 60vh;
+    width: 25vw;
+    padding: 2vh 1vw;
+    line-height: 5vh;
+    background-color: none;
+    background-image: url(assets/lion.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .9;
+    border-radius: 10px;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: white;
+}
+
+.entry_form #todoForm #taskInput {
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.task_Review {
+    height: 60vh;
+    width: 20vw;
+    border-radius: 10px;
+    background-color: red;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 5vw;
+    font-weight: 700;
+    color: rgb(29, 28, 28);
+    background-image: url('assets/marjan-blan-_kUxT8WkoeY-unsplash.jpg');
+    transition: height .5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+input[type="checkbox"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    background-color: green; 
+    border-radius: 3px;
+    border: 1.5px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+input[type="checkbox"]:checked {
+    background-color: white;
+}
+
+button {
+    background-color: white;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.task_details_panel {
+    display: none;
+}
+
+i {
+    color: white;
+    font-size: 1.5vw;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.disable-selection {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+#taskdetails {
+    display: none;
+}
+
+#data{
+    display: none;
+    width: fit-content;
+    height: 30vh;
+    overflow-y: scroll; 
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    transition: ease-in-out cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#data:hover {
+    cursor: pointer;
+}
+
+table {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-collapse: collapse;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+@media (max-width : 996px){
+    html,body {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        font-family: "Roboto";
+    }
+    .whole_page{
+        display: contents;
+    }
+    .header{
+        height: 15%;
+        width: 100%;
+        padding: 0 0;
+        line-height: 0vh;
+        background-color: blue;
+    }
+    .disable-selection{
+        display: flex;
+        align-items: center;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+    }
+    .search_container{
+        display: none;
+    }
+    #searchInput{
+        display: none;
+    }
+    #searchIcon{
+        display: none;
+    }
+    #icons{
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        padding: 0vw 6vw;
+        color: white;
+    }
+    i{
+        font-size: 3vw;
+        gap: 5vw;
+    }
+    .entry_form {
+        justify-content: center;
+        background-color: white;
+        background-image:url("assets/dipesh-shrestha-Diyc9vVaSqM-unsplash.jpg");
+        background-position: 0px .1px;
+        background-size: cover;
+        color: white;
+        width: 100%;
+        height: 85%;
+    }
+    .entry_form h2 {
+        position: absolute;
+        font-weight: 600;
+        width: 340px;
+        top: 20vh;
+        padding: 2vw 4vw;
+        font-size: 3.5vw;
+        color: black;
+        word-spacing: .4vw;
+    }
+    .entry_form p{
+        margin-top: 10px;
+        text-decoration:wavy;
+        text-align: center;
+        font-style: italic;
+        font-size: 4vw;
+        color: white;
+    }
+    .entry_form span {
+        text-decoration: underline;
+        font-weight: 900;
+        font-size: 8vw;
+        color: white;
+    }
+    .entry_form #todoForm {
+        display: none;
+        height: 55vh;
+        width: 70vw;
+        padding: 2vh 5vw;
+        line-height: 4vh;
+        background-color: black;
+        background-image: url(assets/marjan-blan-_kUxT8WkoeY-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 1;
+        border-radius: 10px;
+        transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        color: black;
+        font-weight: 500;
+        font-size: 3vmax;
+    }
+    .task_Review{
+        display: none;
+        height: 55vh;
+        width: 70vw;
+        padding: 2vh 5vw;
+        line-height: 5vh;
+        background-color: black;
+        background-image: url(assets/marjan-blan-_kUxT8WkoeY-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 1;
+        border-radius: 10px;
+        transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        color: black;
+        font-weight: 500;
+        font-size: 6vw;
+    }
+    #data{
+        display: none;
+        width: 300px;
+        height: 200px;
+        font-size: 3.5vw;
+        overflow-y: scroll; 
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        transition: ease-in-out cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .task_table {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-collapse: collapse;
+        transition: all 0.3s ease; /* Smooth transition */
+    }
+    
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        transition: all 0.3s ease; /* Smooth transition */
+    }
+    
+    th {
+        background-color: #f2f2f2;
+        color: black;
+    }
+    #features{
+        position: absolute;
+        top: 63vh;
+        width: 350px;
+        padding: 2vw 5vw;
+        font-size: 4vw;
+        align-items: center;
+        color: white;
+        background-color: none;
+    }
+    #features li{
+        color: white;
+        font-size: 1.7vh;
+        font-weight: 900;
+    }
+}
